@@ -23,7 +23,7 @@ export class SerializeInterceptor implements NestInterceptor {
     next: CallHandler<any>,
   ): Observable<any> {
     // Run sth before request is handled
-    console.log('running before handling', context);
+    console.log('running before handling');
 
     return next.handle().pipe(
       map((data: any) => {
